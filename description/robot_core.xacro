@@ -124,8 +124,8 @@
 
     <gazebo reference="left_front_wheel">
         <material>Gazebo/Black</material>
-        <mu1 value="0.0001"/>
-        <mu2 value="0.0001"/>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
     </gazebo>
 
     <!--Right  rear  wheel  link-->
@@ -155,8 +155,8 @@
 
     <gazebo reference="right_front_wheel">
         <material>Gazebo/Black</material>
-        <mu1 value="0.0001"/>
-        <mu2 value="0.0001"/>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
     </gazebo>
 
 </robot>
