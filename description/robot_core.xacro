@@ -3,17 +3,6 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
-    <!-- Example link -->
-    <material name="white">
-        <color rgba="1 1 1 1"/>
-    </material>
-    <material name="black">
-        <color rgba="0 0 0 1"/>
-    </material>
-    <material name="grey">
-        <color rgba="0.5 0.5 0.5 1"/>
-    </material>
-
 <!--    Base Link-->
     <link name="base_link">
 
@@ -109,7 +98,7 @@
     </gazebo>
 
     <!--Left front wheel link-->
-    <joint name="left_front_wheel_joint" type="continuous">
+    <joint name="left_front_wheel_joint" type="fixed">
         <parent link="base_link"/>
         <child link="left_front_wheel"/>
         <origin xyz="0.05 0.065 0"  rpy="-${pi/2} 0 0"/>
@@ -123,7 +112,7 @@
             </geometry>
             <material name="black"/>
         </visual>
-        <collision>
+        <collision>v
             <geometry>
                 <cylinder radius="0.02" length="0.04"/>
             </geometry>
@@ -135,10 +124,12 @@
 
     <gazebo reference="left_front_wheel">
         <material>Gazebo/Black</material>
+        <mu1 value="0.0001"/>
+        <mu2 value="0.0001"/>
     </gazebo>
 
     <!--Right  rear  wheel  link-->
-    <joint name="right_front_wheel_joint" type="continuous">
+    <joint name="right_front_wheel_joint" type="fixed">
         <parent link="base_link"/>
         <child link="right_front_wheel"/>
         <origin xyz="0.05 -0.065 0"  rpy="${pi/2} 0 0"/>
@@ -164,6 +155,8 @@
 
     <gazebo reference="right_front_wheel">
         <material>Gazebo/Black</material>
+        <mu1 value="0.0001"/>
+        <mu2 value="0.0001"/>
     </gazebo>
 
 </robot>
