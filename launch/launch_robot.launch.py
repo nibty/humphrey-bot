@@ -61,16 +61,16 @@ def generate_launch_description():
         )
     )
 
-    joint_broad_spawner = Node(
+    joint_board_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_broad"],
+        arguments=["joint_board"],
     )
 
-    delayed_joint_broad_spawner = RegisterEventHandler(
+    delayed_joint_board_spawner = RegisterEventHandler(
         event_handler=OnProcessStart(
             target_action=controller_manager,
-            on_start=[joint_broad_spawner],
+            on_start=[joint_board_spawner],
         )
     )
 
@@ -97,5 +97,5 @@ def generate_launch_description():
         twist_mux,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        delayed_joint_board_spawner
     ])

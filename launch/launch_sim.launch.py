@@ -53,10 +53,10 @@ def generate_launch_description():
         arguments=["diff_cont"],
     )
 
-    joint_broad_spawner = Node(
+    joint_board_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_broad"],
+        arguments=["joint_board"],
     )
 
     return LaunchDescription([
@@ -66,5 +66,5 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         diff_drive_spawner,
-        joint_broad_spawner
+        joint_board_spawner
     ])

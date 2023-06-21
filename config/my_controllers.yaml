@@ -6,7 +6,7 @@ controller_manager:
     diff_cont:
       type: diff_drive_controller/DiffDriveController
 
-    joint_broad:
+    joint_board:
       type: joint_state_broadcaster/JointStateBroadcaster
 
 diff_cont:
@@ -64,5 +64,5 @@ diff_cont:
 
 
 
-# joint_broad:
+# joint_board:
 #   ros__parameters:
