@@ -3,7 +3,17 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
-<!--    Base Link-->
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+
+    <material name="grey">
+        <color rgba="0 0 0 0.8"/>
+    </material>
+
+    <!--    Base Link-->
     <link name="base_link">
 
     </link>
